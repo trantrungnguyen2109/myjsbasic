@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="cs.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootrap examble</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1 class="main-title">Chào mừng đến với trang web của tôi !!!!</h1>
+    <ol class="ol">
+        <li>Tôi muốn giới thiệu về bản thân thông qua một số điểm sau:
+            <ol class="oll">
+                <li>Môn học yêu thích: Toán, Lý</li>
+                <li>Sở thích: Thích đi du lịch xa nhà, thích nghe truyện audio tiên hiệp, huyền huyễn, thích câu cá,
+                    thích con gái(hihihihi).... </li>
+                <li>Sở trường: hay mơ mộng(ảo tưởng),sở trường không có nhưng sở đoảng thì thừa </li>
+            </ol>
+        </li>
+        <li>Một số kênh youtube mà tôi hay xem và nghe truyện, nghe nhạc:
+            <ol class="oll">
+                <li>TH Audio - Thế giới truyện Tiên Hiệp</li>
+                <div class="container">
+                    <a href="https://www.youtube.com/@h2ogirl04" target="_blank">
+                        <img src="https://yt3.googleusercontent.com/ytc/AIdro_mXf5b0jVq5aJS0M4mb253xsCMHDpqHXIejPEoxopz7XQ=s160-c-k-c0x00ffffff-no-rj"
+                            style="width: 110px">
+                        <div class="caption">Nhấn để truy cập TH Audio</div>
+                    </a>
+                </div>
+                <li>H2K Music</li>
+                <div class="container">
+                    <a href="https://www.youtube.com/@h2kmusic361" target="_blank">
+                        <img src="https://yt3.googleusercontent.com/HkGOHqvomHH4phuY4sDfnfIoHcIX3p8b6aWd4wy-QGYjX0wkxpZC2FglHf2DCHtI_GPqiLIa2Q=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj"
+                            style="width: 700px; height: 140px;">
+                        <div class="caption">Nhấn để truy cập H2K Music</div>
+                    </a>
+                </div>
+            </ol>
+        </li>
+        <li>  Bài hát của ca sĩ mà tôi yêu thích
+            <iframe width="̀900" height="300" src="https://www.youtube.com/embed/ouNQ7wofAYo?list=RDouNQ7wofAYo"
+                title="Em Có Biết - H2K" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </li>
+        <li></li>
+
+
+    </ol>
+    <script>
+        // Lấy tất cả các container
+        const containers = document.querySelectorAll('.container');
+
+        containers.forEach(container => {
+            const caption = container.querySelector('.caption');
+
+            // Khi di chuột vào container
+            container.addEventListener('mousemove', function (event) {
+                const rect = container.getBoundingClientRect(); // Lấy vị trí container
+                const mouseX = event.clientX - rect.left; // Tọa độ X tính từ container
+                const mouseY = event.clientY - rect.top;  // Tọa độ Y tính từ container
+
+                // Cập nhật vị trí caption
+                caption.style.left = mouseX + 'px';
+                caption.style.top = mouseY + 'px';
+
+                // Hiển thị caption
+                caption.style.visibility = 'visible';
+                caption.style.opacity = '1';
+            });
+
+            // Khi chuột rời khỏi container
+            container.addEventListener('mouseleave', function () {
+                caption.style.visibility = 'hidden';
+                caption.style.opacity = '0';
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>

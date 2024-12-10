@@ -1,0 +1,52 @@
+.main-title {
+    position: static;
+    text-align: center;
+    color: chartreuse;
+}
+
+.ol {
+    font-size: 22px;
+    list-style: upper-roman;
+    color: brown;
+}
+
+a:hover {
+    color: red;
+}
+
+.oll {
+    font-size: 16px;
+    color: blue;
+}
+
+.container {
+    position: relative;
+    display: contents;
+}
+
+.container img {
+    transition: transform 0.3s ease;
+}
+
+.caption {
+    left: 190px;
+    top: 400px;
+    position: absolute;
+    color: rgb(238, 14, 14);
+    pointer-events: none;
+    visibility: visible;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transform: translate(-50%, -100%);
+    /* Định vị trên con trỏ */
+}
+
+.container:hover img {
+    transform: scale(1.1);
+    /* Phóng to ảnh khi hover */
+}
+
+.container:hover .caption {
+    visibility: visible;
+    opacity: 1;
+}
